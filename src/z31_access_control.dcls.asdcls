@@ -1,0 +1,11 @@
+@EndUserText.label: 'Excersise 15'
+@MappingRole: true
+define role Z31_Access_Control {
+    grant 
+        select
+            on
+                z31_authorizations
+                    where
+                        (carrid) = aspect pfcg_auth(S_carrid, carrid,  ACTVT = '03');
+                        
+}
